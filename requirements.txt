@@ -1,0 +1,6 @@
+cv2
+gunicorn
+flask
+pandas
+scikit-learn
+cvzone
