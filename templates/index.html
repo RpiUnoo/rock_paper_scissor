@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hand Game</title>
+</head>
+<body>
+    <h1>Hand Game</h1>
+    <button id="startButton">Start Game</button>
+    <img src="{{ url_for('video_feed') }}" width="1280" height="720" id="video_feed">
+    <!-- Add any game controls or information you need here -->
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        startButton.addEventListener('click', async () => {
+            await fetch('/start_game', { method: 'POST' });
+        });
+    </script>
+</body>
+</html>
